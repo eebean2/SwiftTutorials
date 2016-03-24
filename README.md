@@ -10,6 +10,6 @@ From here, you can open the .playlist files you with to use.
 
 Tutorial List (including Coming Soon):
 
-Swift 101:               Down and Dirty - Coming Soon
+Swift 101:               Down and Dirty (7.3)
 
 Custom Classes 101:      Classes Made Simple (7.3)
