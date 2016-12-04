@@ -9,12 +9,8 @@ From here, you can open the .playlist files you wish to use.
 
 ## Tutorial List:
 
-- Swift 101:                Down and Dirty (7.3) - *Playground*
+- Swift 101:                Down and Dirty (Xcode 8 +) - *Playground*
 
-- Custom Classes 101:       Classes Made Simple (7.3) - *Playground*
+- Custom Classes 101:       Classes Made Simple (Xcode 7.3 +) - *Playground*
 
-- NSUserDefaults:           Hide it! (7.3) - *Playground*
-
-- UIImage:                  (untitled) (*coming soon*) - *Xcode Project*
-
-- (not telling):            Design and Create (*coming soon*) - *Playground*
+- UserDefaults:             Hide it! (Xcode 7.3 +) - *Playground*

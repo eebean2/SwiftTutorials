@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////
 //                                                              //
-//                  NSUserDefaults : Hide It!                   //
+//                   UserDefaults : Hide It!                    //
 //                                                              //
 //////////////////////////////////////////////////////////////////
 //                                                              //
@@ -24,35 +24,35 @@
 // The following code requires Foundation to be imported.
 // For more information on Foundation, see
 //
-// https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_Functions/#//apple_ref/c/func/NSLog
+// https://developer.apple.com/reference/foundation
 //
-// For more information on NSUserDefaults, the topif of this
+// For more information on UserDefaults, the topic of this
 // tutorial, see
 //
-// https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/#//apple_ref/occ/instm/NSUserDefaults
+// https://developer.apple.com/reference/foundation/userdefaults
 //
 //////////////////////////////////////////////////////////////////
 
 import Foundation
 
 /*
- * What is NSUserDefaults?
+ * What is UserDefaults?
  *
- * NSUserDefaults is a great way of saving information locally
+ * UserDefaults is a great way of saving information locally
  * (such as user scores) with minimal exposure to the user.
- * NSDefaults are stored 100% in code unlike a plist.
+ * UserDefaults are stored 100% in code unlike a plist.
  *
- * Although NSUserDefaults are capable of doing some cool things,
+ * Although UserDefaults are capable of doing some cool things,
  * we will only be looking at the simple use of it here.
  *
  * For example:
  *
  */
 
- let ud = NSUserDefaults.standardUserDefaults()
+let defaults = UserDefaults.standard
 
 /*
- * Here we have created an instance of NSUserDefaults under
+ * Here we have created an instance of UserDefaults under
  * the standard user defaults (this is how you will usually
  * do it).
  *
@@ -60,51 +60,51 @@ import Foundation
  * Now lets add some data to it!
  */
 
- ud.setBool(false, forKey: "RandomBool")
+defaults.set(false, forKey: "RandomBool")
 
 /*
  * You can store almost anything. Below are the common examples:
  *
- * setBool(bool, forKey: "name")
- * setFloat(float, forKey: "name")
- * setInteger(integer, forKey: "name")
- * setObject(anyObject, forKey: "name") (we will talk more on this)
- * setDouble(double, forKey: "name")
- * setURL(url, forKey: "name")
+ * .set(Bool, forKey: String)
+ * .set(Float, forKey: String)
+ * .set(Int, forKey: String)
+ * .set(Any, forKey: String) (we will talk more on this)
+ * .set(Double, forKey: "name")
+ * .set(url, forKey: "name")
  *
- * Let's talk about setObject(_:forKey:)
+ * Let's talk about set(Any, forKey: String)
  *
- * Objects accepted for AnyObject include:
+ * Objects accepted for Any include:
  *
- * NSData
- * NSString
- * NSNumber
- * NSDate
- * NSArray
- * NSDictionary
+ * Data
+ * String
+ * Number
+ * Date
+ * Array
+ * Dictionary
  *
  * We will get into more details later.
  *
  */
 
-let b = ud.boolForKey("RandomBool")
+let b = defaults.bool(forKey: "RandomBool")
 
 /*
  * Accessing these values after you have saved them is just as
  * simple. Simplely type one of the following (depending on
  * the data type saved):
  *
- * arrayForKey:
- * boolForKey:
- * dataForKey:
- * dictionaryForKey:
- * floatForKey:
- * integerForKey:
- * objectForKey: (we will talke more on this)
- * stringArrayForKey:
- * stringForKey:
- * doubleForKey:
- * URLForKey:
+ * .array(forKey: String)
+ * .bool(forKey: String)
+ * .data(forKey: String)
+ * .dictionary(forKey: String)
+ * .float(forKey: String)
+ * .integer(forKey: String)
+ * .object(forKey: String) (we will talke more on this)
+ * .string(arrayForKey: String)
+ * .string(forKey: String)
+ * .double(forKey: String)
+ * .url(forKey: String)
  *
  * As you can tell, there are many more values for getting
  * as there are for setting. This is because it is easier
@@ -115,41 +115,26 @@ let b = ud.boolForKey("RandomBool")
  */
 
 /*
- * setObject(anyObject, forKey: "name")
- * 
- * and
- *
- * objectForKey:
+ * .set(Any, forKey: String)
  *
  *
- * These are two functions that cover all values (AnyObject / Element)
+ * This function covers all values
  * and will store them under the key to be retrived when needed.
  * When you store the object, you will send it the class. 
- * (e.g. NSString) Unless you specificly have a Bool, Int, Float,
- * Double, or NSURL, you will use AnyObject and the above.
+ * (e.g. String) Unless you specificly have a Bool, Int, Float,
+ * Double, or URL, you will use Any and the above.
  *
- *
- * NOTICE:
- *
- * setValue(anyObject, forKey: "key") IS NOT the same as 
- * setObject(anyObject, forKey: "name")
- *
- * setValue... is part of NSKeyValueCoding (part of Foundation)
- * while setObject... is strictly for NSUserDefautls.
- * Always use setObject(anyObject, forKey: "name") as it is
- * designed to work with NSUserDefaults and will properly save
- * your item as setValue... may not.
  */
 
 /*
  * Congradulations, you now understand the concepts of
- * NSUserDefaults. Now go use it somewhere! :D
+ * UserDefaults. Now go use it somewhere! :D
  *
  */
 
 /*
  * If you would like to practice, please start an empty project
- * on Xcode as you cannont use NSUserDefaults on a playground.
+ * on Xcode as you cannont use UserDefaults on a playground.
  *
  * The above code is only sample code to show you how it should
  * look, it does not function beyond to look cool in this playground.

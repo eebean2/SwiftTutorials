@@ -28,21 +28,9 @@
  * Swift 101, this will a down and dirty version to cover 
  * everything I can think of.
  *
- * Updated:             Never (first release)
- *
- * Swift Version:       Swift 2.3
- *
- * Xcode:               7.3
- *
- * This is made on a public version of Xcode. If you are using a
- * beta version of Xcode, you will notice significant differances.
- *
  * This document does not care if you have pre-existing programming
  * knowlege. It will walk you through Swift from var to wtf. :)
  */
-
-/// NOTE: print() now REAPLACES NSLog() in Swift 2.2. To use NSLog() 
-///         you must import Foundation (non-standard library for iOS)
 
 /*
  *
@@ -296,7 +284,7 @@ func opt(input: Int) -> (output: Int, outputName: String?) {
  *
  *
  * For a more in debth learning experiance, I point you to my friends @ RayWenderlynch @
- *      https://www.raywenderlich.com/115253/swift-2-tutorial-a-quick-start
+ *      https://www.raywenderlich.com/143771/swift-tutorial-part-1-expressions-variables-constants
  *
  */
  
